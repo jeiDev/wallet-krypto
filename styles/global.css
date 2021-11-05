@@ -3,8 +3,24 @@
     padding: 0;
     color: white;
     font-family: 'Rubik', sans-serif;
-    font-size: 16px;
 }
 
 li{list-style: none;}
 a{text-decoration: none;}
+
+body{
+    font-size: 16px;
+}
+
+[contenteditable]:empty::before {
+    content: attr(placeholder);
+    color: #555; 
+}
+
+[contenteditable]:empty:focus::before {
+    content: "";
+}
+
+[contenteditable]:focus {
+    outline: 0px solid transparent;
+}

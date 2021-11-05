@@ -18,7 +18,7 @@
 }
 
 .header .logo>h1>a{
-    color: #EF443B;
+    color: var(--color-primary);
 }
 
 .header .nav{
@@ -51,7 +51,7 @@
     height: 25px;
     width: 50px;
     padding: 3px 4px;
-    border: 2px solid #EF443B;
+    border: 2px solid var(--color-primary);
     box-sizing: border-box;
     border-radius: 20px;
     display: flex;
