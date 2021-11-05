@@ -1,0 +1,123 @@
+.banner{
+    position: relative;
+    background-color: var(--bg-primary);
+}
+
+.banner>.bg{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.banner>.bg::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    background: linear-gradient(121.69deg, var(--bg-primary) 28.68%, rgba(22, 14, 51, 0.3) 69.08%);
+}
+
+.banner>.bg::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    background: linear-gradient(0deg, var(--bg-primary) 0%, rgba(22, 14, 51, 0) 31.25%);
+}
+
+.banner>.bg>img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.banner>.info{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 35px 0;
+}
+
+.banner>.info>.title{
+    font-size: 2.3em;
+    font-weight: 600;
+}
+
+.banner>.info>.subtitle{
+    margin: 28px 0;
+    font-size: .9em;
+    font-weight: 100;
+}
+
+.banner>.info>.time{
+    display: flex;
+    margin-bottom: 28px;
+    background-color: rgba(22, 14, 51, .5);
+    padding: 10px 40px;
+    border-radius: 64px;
+    align-items: center;
+    font-size: 1.2em;
+}
+
+.banner>.info>.time>div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 10px;
+}
+
+.banner>.info>.time>div>span:first-child{
+    font-size: 2em;
+    color: var(--color-primary);
+    font-weight: 700;
+}
+
+.banner>.info>.time>div>span:last-child{
+    font-size: .9em;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.banner>.info>.buttons>button{
+    text-align: center;
+    padding: 18px 24px;
+    border-radius: 40px;
+    background-color: transparent;
+    border: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    cursor: pointer;
+    margin: 0 18px;
+}
+
+.banner>.info>.buttons>button:first-child{
+    background-color: var(--color-primary);
+}
+
+.banner>.info>.buttons>button:last-child{
+    border: 2px solid var(--color-primary);
+}
+
+.banner>.info>.lastP{
+    margin: 35px 0;
+    text-transform: uppercase;
+}
+
+.banner>.info>.cryptos>ul{
+    display: flex;
+}
+
+.banner>.info>.cryptos>ul>li{
+    margin: 0 12px;
+    display: flex;
+    align-items: center;
+}
+
+.banner>.info>.cryptos>ul>li>img{
+    margin-right: 8px;
+}
