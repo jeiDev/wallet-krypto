@@ -1,0 +1,76 @@
+.header{
+    position: fixed;
+    width: 100vw;
+    height: 40px;
+    padding: 15px 0;
+    overflow: hidden;
+    background: #160E33;
+    display: flex;
+    align-items: center;
+}
+
+.header>div{
+    flex: 1 1 auto;
+}
+
+.header .contain{
+    display: flex;
+}
+
+.header .logo>h1>a{
+    color: #EF443B;
+}
+
+.header .nav{
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.header .nav ul{
+    display: flex;
+    align-items: center;
+}
+
+.header .nav ul>li{
+    margin: 0 10px;
+}
+
+.header .nav ul>li>a{
+    font-size: .75em;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.header .boxLanguage{
+    position: relative;
+}
+
+.header .boxLanguage .activeLanguage{
+    display: flex;
+    height: 25px;
+    width: 50px;
+    padding: 3px 4px;
+    border: 2px solid #EF443B;
+    box-sizing: border-box;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.header .boxLanguage .activeLanguage .contenFlagLanguage{
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+}
+
+.header .boxLanguage .activeLanguage .contenFlagLanguage>img{
+    border-radius : 50%;
+    overflow: hidden;
+}
+
+.header .boxLanguage .activeLanguage img{
+    object-fit: contain;
+}
