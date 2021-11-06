@@ -2,7 +2,7 @@ import Link from "next/link";
 import Head from "next/head";
 import style from "~/styles/layout/header.module.css";
 import { navSetting } from "~/settings/nav.setting";
-
+import Image from "next/image";
 
 const Header = () => {
 
@@ -38,9 +38,9 @@ const Header = () => {
                             <div className={style.boxLanguage}>
                                 <div className={style.activeLanguage}>
                                     <div className={style.contenFlagLanguage}>
-                                        <img src="/images/language/usa.png" alt="usa language" />
+                                        <Image src="/images/language/usa.png" alt="usa language" height="15" width="15" objectFit="contain"/>
                                     </div>
-                                    <img src="/images/language/arrow-down.png" alt="arrow down language" />
+                                    <Image src="/images/language/arrow-down.png" alt="arrow down language" height="15" width="15" objectFit="contain"/>
                                 </div>
                                 <div></div>
                             </div>

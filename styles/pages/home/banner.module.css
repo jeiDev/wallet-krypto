@@ -1,6 +1,8 @@
 .banner{
     position: relative;
     background-color: var(--bg-primary);
+    height: calc(100vh - 111px);
+    max-height: calc(100vh - 111px);
 }
 
 .banner>.bg{
@@ -41,12 +43,9 @@
     flex-direction: column;
     align-items: center;
     padding: 35px 0;
+    padding-top: 97px;
 }
 
-.banner>.info>.title{
-    font-size: 2.3em;
-    font-weight: 600;
-}
 
 .banner>.info>.subtitle{
     margin: 28px 0;

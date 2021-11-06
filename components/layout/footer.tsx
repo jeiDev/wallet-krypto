@@ -2,6 +2,7 @@ import Link from "next/link";
 import { footerInfoSetting } from "~/settings/footer.setting";
 import style from "~/styles/layout/footer.module.css";
 import classnames from "classnames";
+import Image from "next/image";
 
 const { copyRight, links, socials, items } = footerInfoSetting;
 
@@ -75,7 +76,7 @@ const Footer = () => {
                                 <li key={i}>
                                     <Link href={social.link}>
                                         <a>
-                                            <img src={`/images/social/${social.image}.png`} alt="" />
+                                            <Image src={`/images/social/${social.image}.png`} alt={social.image} height="16" width="16" objectFit="contain"/>
                                         </a>
                                     </Link>
                                 </li>

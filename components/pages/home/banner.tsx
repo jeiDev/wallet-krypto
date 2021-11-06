@@ -1,4 +1,6 @@
+import Title from "~/components/apps/title";
 import style from "~/styles/pages/home/banner.module.css";
+import Image from "next/image";
 
 const HomeBanner = () => {
     const cryptos = [
@@ -12,8 +14,8 @@ const HomeBanner = () => {
                 <img src="/images/banner.png" alt="banner" />
             </div>
             <div className={style.info}>
-                <span className={style.title}>Next Generation</span>
-                <span className={style.title}>Crypto Trading</span>
+                <Title>Next Generation</Title>
+                <Title>Crypto Trading</Title>
 
                 <p className={style.subtitle}>Crypto Market Starts in</p>
 
