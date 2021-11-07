@@ -6,31 +6,18 @@ import { numberShort } from "~/helpers/number.helper";
 import { CardPricePropsI } from "~/interfaces/apps/card/card.interface";
 import { useEffect, useState } from "react";
 import { breakPoints } from "~/helpers/window.helper";
-
-const breakPoint = {
-    3: {
-        min: 1000
-    },
-    2: {
-        min: 770,
-        max: 999
-    },
-    1: {
-        min: 0,
-        max: 769
-    }
-}
+import { breakPointPriceHome } from "~/settings/home.setting";
 
 const Section2 = () => {
     const [grid, setGrid] = useState(3);
 
     useEffect(() => {
-        breakPoints(window.innerWidth, breakPoint, (grid) => {
+        breakPoints(window.innerWidth, breakPointPriceHome, (grid) => {
             if(!grid) return;
             setGrid(grid);
 
             window.addEventListener('resize', () => {
-                breakPoints(window.innerWidth, breakPoint, (grid) => {
+                breakPoints(window.innerWidth, breakPointPriceHome, (grid) => {
                     if(!grid) return;
                     setGrid(grid);
                 });
@@ -101,7 +88,6 @@ const Section2 = () => {
         }
     ]
 
-    console.log({grid})
     return (
         <section className="container">
             <div className={style.contain}>
