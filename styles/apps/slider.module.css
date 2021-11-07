@@ -6,7 +6,7 @@
 
 .contain{
     flex: 1 1 auto;
-    margin: 0 54px;
+    margin: 0 28px 0 54px;
     overflow: hidden;
 }
 
@@ -37,4 +37,15 @@
 .buttonDisabled{
     opacity: 0;
     cursor: auto;
+}
+
+.boxGrid{
+    display: grid;
+    width: 100%;
+    grid-gap: 30px;
+    margin-left: 30px;
+}
+
+.boxGrid:first-child{
+    margin-right: 0!important;
 }

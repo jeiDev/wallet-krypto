@@ -23,13 +23,14 @@ const Slider = ({items, Render, grid}: SliderPropsI) => {
         
     }
 
+    console.log({position, numContains})
     return (
         <div className={style.container}>
             <div className={style.button} onClick={handlerBack} style={{display: showBTN ? "flex" : "none" }}>
                 <Image src="/images/chevron-left.png" height="15" width="15" objectFit="contain"/>
             </div>
             <div className={style.contain}>
-                <div className={style.animation} style={{width: `${100  * numContains}%`, left: `-${position * 100}%`}}>
+                <div className={style.animation} style={{width: `${100  * numContains}%`, left: `calc(-${(position > numContains ? (numContains - 1) : position) * 100}% - 30px)`}}>
                     {contains.map((_, i) => (
                         <Slider.Items key={i} items={items.slice(grid * i, grid * (i+1))} grid={grid} Render={Render}/>    
                     ))}
@@ -46,9 +47,9 @@ Slider.Items = ({items, grid, Render}: SliderPropsI) => {
     const fr = `${'1fr '.repeat(grid)}`.trim();
 
     return (
-        <div style={{display: "grid", gridTemplateColumns: fr, width: "100%", gridGap: 30}}>
+        <div className={style.boxGrid} style={{gridTemplateColumns: fr}}>
             {items.map((item, i) => (
-               <div key={i}>
+               <div key={i} style={{width: "100%", overflow: "hidden"}}>
                    <Render item={item} index={i}/>
                </div>
             ))}

@@ -6,7 +6,7 @@ export interface CardPriceButtonI{
 export interface CardPricePropsI {
     title: string
     description: string
-    price: number
+    price: string
     button: CardPriceButtonI
     image: string
 }

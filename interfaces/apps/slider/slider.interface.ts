@@ -1,11 +1,7 @@
 import { ReactElement } from "react";
 
-export interface SliderItemI {
-
-}
-
 export interface SliderRenderParamI{
-    item: SliderItemI
+    item: any
     index: number
 }
 
@@ -14,7 +10,7 @@ export interface SliderRenderI {
 }
 
 export interface SliderPropsI {
-    items: Array<SliderItemI>
+    items: Array<any>
     Render: SliderRenderI
     grid: number
 }

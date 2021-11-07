@@ -71,3 +71,19 @@
     text-transform: uppercase;
     font-weight: 600;
 }
+
+@media (max-width: 1400px) {
+    .footer{
+        flex-direction: column;
+    }
+
+    .price{
+        padding-bottom: 15px;
+    }
+
+    .button{
+       width: 100%;
+       margin: 0 20px;
+       box-sizing: border-box;
+    }
+}
