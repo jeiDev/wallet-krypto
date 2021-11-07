@@ -1,0 +1,38 @@
+.container{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.contain{
+    flex: 1 1 auto;
+    margin: 0 54px;
+    overflow: hidden;
+}
+
+.button{
+    width: 45px;
+    height: 45px;
+    background-color: #ef443b28;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all ease .2s;
+}
+
+.button:hover{
+    background-color: #EF443B;
+}
+
+.animation{
+    position: relative;
+    display: flex;
+    transition: all ease .4s;
+}
+
+.buttonDisabled{
+    opacity: 0;
+    cursor: auto;
+}
