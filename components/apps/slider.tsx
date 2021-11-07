@@ -7,6 +7,7 @@ const Slider = ({items, Render, grid}: SliderPropsI) => {
     const [position, setPosition] = useState(0);
     const contains = [];
     const numContains = Math.ceil(items.length / grid);
+    const showBTN = numContains > 1;
 
     for (let i = 0; i < numContains; i++) {
         contains.push(i);
@@ -24,7 +25,7 @@ const Slider = ({items, Render, grid}: SliderPropsI) => {
 
     return (
         <div className={style.container}>
-            <div className={style.button} onClick={handlerBack}>
+            <div className={style.button} onClick={handlerBack} style={{display: showBTN ? "flex" : "none" }}>
                 <Image src="/images/chevron-left.png" height="15" width="15" objectFit="contain"/>
             </div>
             <div className={style.contain}>
@@ -34,7 +35,7 @@ const Slider = ({items, Render, grid}: SliderPropsI) => {
                     ))}
                 </div>
             </div>
-            <div className={style.button} onClick={handlerNext}>
+            <div className={style.button} onClick={handlerNext} style={{display: showBTN ? "flex" : "none" }}>
                 <Image src="/images/chevron-right.png" height="15" width="15" objectFit="contain"/>
             </div>
         </div>
@@ -45,7 +46,7 @@ Slider.Items = ({items, grid, Render}: SliderPropsI) => {
     const fr = `${'1fr '.repeat(grid)}`.trim();
 
     return (
-        <div style={{display: "grid", gridTemplateColumns: fr, width: "100%"}}>
+        <div style={{display: "grid", gridTemplateColumns: fr, width: "100%", gridGap: 30}}>
             {items.map((item, i) => (
                <div key={i}>
                    <Render item={item} index={i}/>
