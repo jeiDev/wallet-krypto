@@ -41,6 +41,13 @@
     font-size: .75em;
     font-weight: 400;
     text-transform: uppercase;
+    transition: all ease .4s;
+
+}
+
+.header .nav ul>li>a:hover{
+    font-weight: bold;
+    font-size: 1em;
 }
 
 .header .boxLanguage{
