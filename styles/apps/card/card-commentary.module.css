@@ -1,0 +1,30 @@
+.box{
+    height: 380px;
+    border: 2px solid var(--color-primary);
+    box-sizing: border-box;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.description{
+    opacity: .7;
+    font-weight: 100;
+    text-align: center;
+    font-size: .8em;
+    padding: 15px 0;
+}
+
+.name{
+    padding-top: 15px;
+}
+
+.job{
+    font-weight: 100;
+    font-size: .9em;
+    color: var(--color-primary);
+}

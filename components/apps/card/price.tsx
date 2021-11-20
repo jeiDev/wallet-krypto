@@ -1,6 +1,6 @@
 import { CardPricePropsI } from "~/interfaces/apps/card/card.interface";
 import Link from "next/link";
-import style from "~/styles/apps/card-price.module.css";
+import style from "~/styles/apps/card/card-price.module.css";
 
 const CardPrice = ({title, description, price, button, image} : CardPricePropsI) => {
     

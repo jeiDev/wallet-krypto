@@ -5,23 +5,15 @@ import style from "~/styles/pages/home/section2.module.css";
 import { numberShort } from "~/helpers/number.helper";
 import { CardPricePropsI } from "~/interfaces/apps/card/card.interface";
 import { useEffect, useState } from "react";
-import { breakPoints } from "~/helpers/window.helper";
-import { breakPointPriceHome } from "~/settings/home.setting";
+import breakPoint from "~/helpers/break-point";
 
 const Section2 = () => {
     const [grid, setGrid] = useState(3);
 
     useEffect(() => {
-        breakPoints(window.innerWidth, breakPointPriceHome, (grid) => {
+        breakPoint((grid: number) => {
             if(!grid) return;
             setGrid(grid);
-
-            window.addEventListener('resize', () => {
-                breakPoints(window.innerWidth, breakPointPriceHome, (grid) => {
-                    if(!grid) return;
-                    setGrid(grid);
-                });
-            });
         })
     }, []);
 

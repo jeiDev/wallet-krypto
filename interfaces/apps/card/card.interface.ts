@@ -10,3 +10,10 @@ export interface CardPricePropsI {
     button: CardPriceButtonI
     image: string
 }
+
+export interface CardCommentaryPropsI {
+    name: string
+    job: string
+    image: string
+    description: string
+}
