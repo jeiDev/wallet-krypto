@@ -4,9 +4,10 @@
     height: 40px;
     padding: 15px 0;
     overflow: hidden;
-    background: #160E33;
+    background: var(--bg-primary);
     display: flex;
     align-items: center;
+    z-index: 5000;
 }
 
 .header>div{
@@ -40,6 +41,13 @@
     font-size: .75em;
     font-weight: 400;
     text-transform: uppercase;
+    transition: all ease .4s;
+
+}
+
+.header .nav ul>li>a:hover{
+    font-weight: bold;
+    font-size: 1em;
 }
 
 .header .boxLanguage{

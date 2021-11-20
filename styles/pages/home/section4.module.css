@@ -1,0 +1,37 @@
+.section{
+    background-image: url("/images/bg-section.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 130px!important;
+}
+
+.box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 500px;
+    font-size: 1.5em;
+    text-align: center;
+    flex-direction: column;
+}
+
+
+.boxStoreApp{
+    display: flex;
+    margin-top: 18px;
+}
+
+.storeApp{
+    height: 65px;
+    width: 190px;
+    cursor: pointer;
+}
+
+.googlePlay{
+    background-image: url("/images/store/google-play.png");  
+    margin-right: 20px;
+}
+
+.appStore{
+    background-image: url("/images/store/app-store.png");  
+}

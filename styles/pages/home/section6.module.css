@@ -1,0 +1,23 @@
+.box{
+    padding: 130px 0;
+    text-align: center;
+}
+
+.contain{
+    margin-top: 40px;
+}
+
+.boxButton{
+    margin-top: 25px;
+}
+
+.button{
+    background-color: transparent;
+    border: 2px solid var(--color-primary);
+    padding: 18px 24px;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 30px;
+}
