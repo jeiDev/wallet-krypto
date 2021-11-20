@@ -2,9 +2,10 @@ import Title from "~/components/apps/title";
 import Slider from "~/components/apps/slider";
 import CardCommentary from "~/components/apps/card/commentary";
 import style from "~/styles/pages/home/section2.module.css";
-import { CardCommentaryPropsI, CardPricePropsI } from "~/interfaces/apps/card/card.interface";
+import { CardCommentaryPropsI } from "~/interfaces/apps/card/card.interface";
 import { useEffect, useState } from "react";
 import breakPoint from "~/helpers/break-point";
+import SubTitle from "~/components/apps/subtitle";
 
 const Section5 = () => {
     const [grid, setGrid] = useState(3);
@@ -56,10 +57,10 @@ const Section5 = () => {
     ]
 
     return (
-        <section className="container">
+        <div className="container">
             <div className={style.contain}>
                 <Title>30 Million Users Worldwide</Title>
-                <p style={{paddingBottom: 50}}>Tincidunt id nibh orci nibh justo. Purus et turpis nulla elementum, sed vel.</p>
+                <SubTitle>Tincidunt id nibh orci nibh justo. Purus et turpis nulla elementum, sed vel.</SubTitle>
 
                 <Slider 
                     grid={grid}
@@ -72,7 +73,7 @@ const Section5 = () => {
                     }}
                 />
             </div>
-        </section>
+        </div>
     )
 }
 

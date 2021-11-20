@@ -1,6 +1,7 @@
 import Title from "~/components/apps/title";
 import style from "~/styles/pages/home/section1.module.css";
 import classNames from "classnames";
+import SubTitle from "~/components/apps/subtitle";
 
 const HomeSection1 = () => {
 
@@ -12,10 +13,10 @@ const HomeSection1 = () => {
     ]
 
     return (
-        <section className="container">
+        <div className="container">
             <div className={style.section}>
                 <Title>How to Trade With Krypto</Title>
-                <p>Tincidunt id nibh orci nibh just nulla elementum, sed vel.</p>
+                <SubTitle>Tincidunt id nibh orci nibh just nulla elementum, sed vel.</SubTitle>
 
                 <div className={style.contain}>
                     <div className="row">
@@ -43,7 +44,7 @@ const HomeSection1 = () => {
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
     )
 }
 

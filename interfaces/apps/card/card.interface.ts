@@ -17,3 +17,9 @@ export interface CardCommentaryPropsI {
     image: string
     description: string
 }
+
+export interface CardBlogPropsI{
+    title: string
+    image: string
+    description: string
+}

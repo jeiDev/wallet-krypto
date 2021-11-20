@@ -5,7 +5,7 @@ import style from "~/styles/pages/home/section4.module.css";
 const Section4 = () => {
 
     return (
-        <section className={style.section}>
+        <div className={style.section}>
             <div className="container">
                 <div className={style.box}>
                     <Title>Most advanced crypto trading<br/> platfrom ever!</Title>
@@ -15,7 +15,7 @@ const Section4 = () => {
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
     )
 }
 

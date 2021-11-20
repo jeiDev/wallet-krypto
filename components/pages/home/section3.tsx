@@ -2,6 +2,7 @@ import Title from "~/components/apps/title";
 import Image from "next/image";
 import classNames from "classnames";
 import style from "~/styles/pages/home/section3.module.css";
+import SubTitle from "~/components/apps/subtitle";
 
 const HomeSection3 = () => {
     const items = [
@@ -33,10 +34,10 @@ const HomeSection3 = () => {
     ]
 
     return (
-        <section className="container">
+        <div className="container">
             <div className={style.contain}>
                 <Title>Attractive Features</Title>
-                <p style={{ paddingBottom: 50 }}>Windaful makes playing the UK's best raffles easy and fun.</p>
+                <SubTitle>Windaful makes playing the UK's best raffles easy and fun.</SubTitle>
 
                 <div className={classNames("row", style.box)}>
                     {items.map((item, i) => (
@@ -54,7 +55,7 @@ const HomeSection3 = () => {
                     ))}
                 </div>
             </div>
-        </section>
+        </div>
     )
 }
 

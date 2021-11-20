@@ -6,6 +6,7 @@ import { numberShort } from "~/helpers/number.helper";
 import { CardPricePropsI } from "~/interfaces/apps/card/card.interface";
 import { useEffect, useState } from "react";
 import breakPoint from "~/helpers/break-point";
+import SubTitle from "~/components/apps/subtitle";
 
 const Section2 = () => {
     const [grid, setGrid] = useState(3);
@@ -81,10 +82,10 @@ const Section2 = () => {
     ]
 
     return (
-        <section className="container">
+        <div className="container">
             <div className={style.contain}>
                 <Title>Available Creyptos</Title>
-                <p style={{paddingBottom: 50}}>Tincidunt id nibh orci nibh justo. Purus et turpis nulla elementum, sed vel.</p>
+                <SubTitle>Tincidunt id nibh orci nibh justo. Purus et turpis nulla elementum, sed vel.</SubTitle>
 
                 <Slider 
                     grid={grid}
@@ -97,7 +98,7 @@ const Section2 = () => {
                     }}
                 />
             </div>
-        </section>
+        </div>
     )
 }
 
