@@ -1,13 +1,26 @@
 import Image from "next/dist/client/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { SliderPropsI } from "~/interfaces/apps/slider/slider.interface";
 import style from "~/styles/apps/slider.module.css";
 
+const minWithForMargin = 500;
+const defaultMargin = 30;
 const Slider = ({items, Render, grid}: SliderPropsI) => {
     const [position, setPosition] = useState(0);
+    const [margin, setMargin] = useState(30);
     const contains = [];
     const numContains = Math.ceil(items.length / grid);
     const showBTN = numContains > 1;
+
+    useEffect(() => {
+        setMargin(window.innerWidth > minWithForMargin ? defaultMargin : 0)
+        window.addEventListener('resize', () => {
+            const _margin = window.innerWidth > minWithForMargin ? defaultMargin : 0;
+            if(_margin != margin){
+                setMargin(_margin)
+            }
+        })
+    }, [])
 
     for (let i = 0; i < numContains; i++) {
         contains.push(i);
@@ -20,17 +33,15 @@ const Slider = ({items, Render, grid}: SliderPropsI) => {
     const handlerNext = () => {
         const index = (position + 1);
         setPosition(index >= numContains ? 0 : index);
-        
     }
 
-    console.log({position, numContains})
     return (
         <div className={style.container}>
             <div className={style.button} onClick={handlerBack} style={{display: showBTN ? "flex" : "none" }}>
                 <Image src="/images/chevron-left.png" height="15" width="15" objectFit="contain"/>
             </div>
             <div className={style.contain}>
-                <div className={style.animation} style={{width: `${100  * numContains}%`, left: `calc(-${(position > numContains ? (numContains - 1) : position) * 100}% - 30px)`}}>
+                <div className={style.animation} style={{width: `${100  * numContains}%`, left: `calc(-${(position > numContains ? (numContains - 1) : position) * 100}% - ${margin}px)`}}>
                     {contains.map((_, i) => (
                         <Slider.Items key={i} items={items.slice(grid * i, grid * (i+1))} grid={grid} Render={Render}/>    
                     ))}

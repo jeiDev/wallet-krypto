@@ -3,7 +3,8 @@
     padding-right:var(--bs-gutter-x,.75rem);
     padding-left:var(--bs-gutter-x,.75rem);
     margin-right:auto;
-    margin-left:auto
+    margin-left:auto;
+    box-sizing: border-box;
 }
 
 @media (min-width:576px){

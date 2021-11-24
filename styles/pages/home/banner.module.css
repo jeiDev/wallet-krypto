@@ -120,3 +120,18 @@
 .banner>.info>.cryptos>ul>li>img{
     margin-right: 8px;
 }
+
+@media (max-width: 1024px) {
+    .banner>.info{
+        padding: 0!important;
+        height: 100%;
+        justify-content: center;
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 770px) {
+    .banner>.info{
+        font-size: 1.4em;
+    }
+}

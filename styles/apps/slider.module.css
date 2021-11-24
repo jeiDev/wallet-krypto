@@ -49,3 +49,19 @@
 .boxGrid:first-child{
     margin-right: 0!important;
 }
+
+
+@media (max-width: 500px) {
+    .button{
+        display: none!important;
+    }
+
+    .contain{
+        margin: 0;
+    }
+
+    .boxGrid{
+        grid-gap: 0;
+        margin-left: 0;
+    }
+}
